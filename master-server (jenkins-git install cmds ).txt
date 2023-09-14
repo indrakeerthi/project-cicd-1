@@ -1,5 +1,6 @@
+#!/bin/bash
 sudo yum update -y
-
+sudo yum install wget
 # AWS AMI AmazonLinux2023 use this cmd for java installation
 sudo dnf install java-11-amazon-corretto -y
 
@@ -12,6 +13,7 @@ sudo yum install jenkins -y
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 sudo  yum install git -y
-hostname Master-server
+sudo hostname Master-server
+exec bash
 sudo systemctl status jenkins
 
